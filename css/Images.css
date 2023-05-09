@@ -1,0 +1,50 @@
+.myMessage {z-index: 10000000000;
+    /* border: 1px solid black; */
+    border-radius: 4%;
+    -webkit-border-radius: 4%;
+    -moz-border-radius: 4%;
+    -ms-border-radius: 4%;
+    -o-border-radius: 4%;
+    color: white;
+    padding: 3%;
+    position: absolute;
+    left: 10%;
+    top: 70%;
+    display: none;
+    background-color: crimson;
+}
+
+.nose {z-index: 10000000000;
+    position: absolute;
+    background-color: crimson;
+    height: 20px;
+    width: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    top: -10px;
+    left: 61px;
+    display: none;
+}
+
+.chota-img {
+    margin: 10px;
+    height: 200px;
+    width: 200px;
+}
+
+.chota-img .img1 {
+    height: 200px;
+    width: 200px;
+    border-radius: 10%;
+}
+
+.fa-solid.fa-circle-exclamation:hover + .myMessage,
+.fa-solid.fa-circle-exclamation:hover + .myMessage .nose {
+    display: block;
+}
+.col-sm-12.col-md-8.col-lg-8.d-flex{
+    overflow-x:scroll;
+}

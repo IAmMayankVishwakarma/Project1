@@ -1,0 +1,16 @@
+@media screen and (max-width: 800px) {
+  .card {
+      max-width: 50%;
+      margin: 10px 24%;
+      padding: 40px;
+    }
+  }
+
+.card:hover{z-index: 200;
+  transform:scale(1.2) ;
+  -webkit-transform:scale(1.2) ;
+  -moz-transform:scale(1.2) ;
+  -ms-transform:scale(1.2) ;
+  -o-transform:scale(1.2) ;
+}
+  

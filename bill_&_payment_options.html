@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>Optical CRM - Bill & Payment Options</title>
+    <meta content="Admin Dashboard" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App Icons -->
+    <link rel="shortcut icon" href="https://admin.opticalbroadband.in/assets/images/favicon.ico">
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" href="https://admin.opticalbroadband.in/assets/plugins/morris/morris.css">
+    <link rel="stylesheet" href="./css/Routers.css">
+    <link rel="stylesheet" href="./css/Configuration.css">
+
+    <!--Font Awsome links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!-- App css -->
+    <link href="https://admin.opticalbroadband.in/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://admin.opticalbroadband.in/assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="https://admin.opticalbroadband.in/assets/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- Table css -->
+    <!-- <link href="https://admin.opticalbroadband.in/assets/plugins/RWD-Table-Patterns/dist/css/rwd-table.min.css" rel="stylesheet" type="text/css" media="screen"> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <div class="header-bg">
+        <!-- Navigation Bar-->
+        <header id="topnav">
+            <div class="topbar-main">
+                <div class="container-fluid">
+
+                    <!-- Image Logo -->
+                    <a href="#" class="logo">
+                        <img src="assets/img/logo-sm.png" alt="" height="22" class="logo-small">
+                    </a>
+                    <!-- End Logo-->
+
+                    <div class="menu-extras topbar-custom navbar p-0">
+
+                        <!-- Search input -->
+                        <div class="search-wrap" id="search-wrap">
+                            <div class="search-bar">
+                                <input class="search-input" type="search" placeholder="Search" />
+                                <a href="#" class="close-search toggle-search" data-target="#search-wrap">
+                                    <!-- <i class="mdi mdi-close-circle"></i> -->
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <ul class="list-inline ml-auto mb-0">
+                            <li class="list-inline-item text-white mr-3">
+                                <div class="row">
+                                    <span class="font-13">Users</span>
+                                </div>
+                                <div class="row">
+                                    <span class="font-13"
+                                        style="background-color:#cccccc; color:white; border-radius:35%; text-align:center; padding:7% 20%;">5</span>
+                                </div>
+                            </li>
+                            <li class="list-inline-item text-white mx-3">
+                                <div class="row">
+                                    <span class="font-13">Online </span>
+                                </div>
+                                <div class="row">
+                                    <span class="font-13"
+                                        style="background-color:#cccccc; color:white; border-radius:35%; text-align:center; padding:7% 20%;">3
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul class="list-inline ml-auto mb-0">
+
+                            <li class="list-inline-item dropdown notification-list">
+                                <a class="nav-link dropdown-toggle text-white arrow-none waves-effect waves-light"
+                                    data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
+                                    aria-expanded="false">
+                                    OPTICAL BROADBAND <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-animated">
+                                    <a href="https://admin.opticalbroadband.in/settings/general" class="dropdown-item">
+                                        <i class="dripicons-user text-muted"></i>
+
+                                        Settings</a>
+                                    <a href="https://admin.opticalbroadband.in/zone/sub_zone" class="dropdown-item"> <i
+                                            class="dripicons-wallet text-muted"></i> Create sub zone</a>
+                                    <a href="https://admin.opticalbroadband.in/zone/zone_detail" class="dropdown-item">
+                                        <i class="dripicons-wallet text-muted"></i>My zone details</a>
+                                    <a href="#" class="dropdown-item" data-toggle="modal"
+                                        data-target=".bs-example-modal-center1"> <i
+                                            class="dripicons-wallet text-muted"></i> Switch zone</a>
+                                </div>
+                            </li>
+                        </ul>
+
+
+
+                        <ul class="list-inline ml-auto mb-0">
+
+                            <!-- notification-->
+
+                            <li class="list-inline-item dropdown notification-list">
+                                <a class="nav-link waves-effect toggle-search" href="#" data-target="#search-wrap">
+                                    <!-- <i class="mdi mdi-magnify noti-icon"></i> --><i class="fa fa-search"
+                                        aria-hidden="true"></i>
+                                </a>
+                            </li>
+
+                            <li class="list-inline-item dropdown notification-list">
+                                <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown"
+                                    href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <!-- <i class="mdi mdi-bell-outline noti-icon"></i> -->
+                                    <i class="fa fa-bell-o" aria-hidden="true"></i>
+                                    <span class="badge badge-info badge-pill noti-icon-badge">3</span>
+                                </a>
+                                <div
+                                    class="dropdown-menu dropdown-menu-right dropdown-menu-animated dropdown-arrow dropdown-menu-lg">
+                                    <!-- item-->
+                                    <div class="dropdown-item noti-title">
+                                        <h5>Notification (3)</h5>
+                                    </div>
+
+                                    <div class="slimscroll-noti">
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                                            <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i>
+                                            </div>
+                                            <p class="notify-details"><b>Your order is placed</b><span
+                                                    class="text-muted">Dummy text of the printing and typesetting
+                                                    industry.</span></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-danger"><i
+                                                    class="mdi mdi-message-text-outline"></i></div>
+                                            <p class="notify-details"><b>New Message received</b><span
+                                                    class="text-muted">You have 87 unread messages</span></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-info"><i class="mdi mdi-filter-outline"></i>
+                                            </div>
+                                            <p class="notify-details"><b>Your item is shipped</b><span
+                                                    class="text-muted">It is a long established fact that a reader
+                                                    will</span></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-success"><i
+                                                    class="mdi mdi-message-text-outline"></i></div>
+                                            <p class="notify-details"><b>New Message received</b><span
+                                                    class="text-muted">You have 87 unread messages</span></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-warning"><i class="mdi mdi-cart-outline"></i>
+                                            </div>
+                                            <p class="notify-details"><b>Your order is placed</b><span
+                                                    class="text-muted">Dummy text of the printing and typesetting
+                                                    industry.</span></p>
+                                        </a>
+
+                                    </div>
+
+
+                                    <!-- All-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-all">
+                                        View All
+                                    </a>
+
+                                </div>
+                            </li>
+                            <!-- User-->
+                            <li class="list-inline-item dropdown notification-list">
+                                <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user"
+                                    data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
+                                    aria-expanded="false">
+                                    <img src="assets/img/Broadcomavtar.png" alt="user" class="rounded-circle">
+                                    <span class="d-none d-md-inline-block ml-1"> admin
+                                        <!-- <i class="mdi mdi-chevron-down"></i>  -->
+                                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown">
+                                    <a class="dropdown-item" href="#">
+                                        <!-- <i class="dripicons-user text-muted"> --><i class="fa fa-user-circle-o"
+                                            aria-hidden="true"></i>
+
+                                        </i> My profile</a>
+                                    <a class="dropdown-item" href="#"> Online </a>
+                                    <a class="dropdown-item" href="#"> Admin accounts </a>
+                                    <a class="dropdown-item" href="https://admin.opticalbroadband.in/admin/admin_roles">
+                                        Admin roles </a>
+                                    <a class="dropdown-item"
+                                        href="https://admin.opticalbroadband.in/admin/classification"> Admin
+                                        classifications </a>
+                                    <a class="dropdown-item" href="#"> License </a>
+                                    <a class="dropdown-item" href="#">
+                                        <!-- <i class="dripicons-lock text-muted"></i> -->
+                                        <i class="fa fa-lock" aria-hidden="true"></i>
+                                        Lock screen</a>
+
+                                    <a class="dropdown-item" href="https://admin.opticalbroadband.in/logout" onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                        <!-- <i class="dripicons-exit text-muted"></i>  -->
+                                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                        Logout
+                                    </a>
+
+                                    <form id="logout-form" action="https://admin.opticalbroadband.in/logout"
+                                        method="POST" class="d-none">
+                                        <input type="hidden" name="_token"
+                                            value="NBhjPHPAsF4dUzy6jPvVpzYUAphvhmN7eSBENaVP">
+                                    </form>
+
+                                </div>
+                            </li>
+                            <li class="menu-item list-inline-item">
+                                <!-- Mobile menu toggle-->
+                                <a class="navbar-toggle nav-link">
+                                    <div class="lines">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </a>
+                                <!-- End mobile menu toggle-->
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <!-- end menu-extras -->
+
+                    <div class="clearfix"></div>
+
+                </div> <!-- end container -->
+            </div>
+            <!-- end topbar-main -->
+
+            <!-- MENU Start -->
+            <div class="navbar-custom">
+                <div class="container-fluid">
+                    <!-- Logo-->
+                    <div class="d-none d-lg-block">
+                        <!-- Text Logo
+                    <a href="index.html" class="logo">
+                        Foxia
+                    </a>
+                        -->
+
+
+                    </div>
+                    <!-- End Logo-->
+                    <div id="navigation">
+
+                        <!-- Navigation Menu-->
+                        <ul class="navigation-menu">
+
+                            <li class="has-submenu">
+                                <a href="#">
+                                    <!-- <i class="dripicons-briefcase"></i> -->
+                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                    Users and packages
+                                    <!-- <i class="mdi mdi-chevron-down mdi-drop"></i> -->
+                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                </a>
+                                <ul class="submenu megamenu">
+                                    <li>
+                                        <ul>
+                                            <li><a href="" style="pointer-events: none"><b> Dashboard </b></a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/home">Dashboard</a></li>
+                                            <li><a href="" style="pointer-events: none"><b> Users </b></a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/users/user_management">User
+                                                    Management</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/users/caf_generation">CAF
+                                                    Generation</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/users/search_users">Search
+                                                    Users</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/users/document_management">Document
+                                                    Management</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li><a href="" style="pointer-events: none"><b> Packages </b></a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/packages/usage">Usage
+                                                    Packages</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/packages/bandwidth">Bandwidth</a>
+                                            </li>
+                                            <li><a href="https://admin.opticalbroadband.in/packages/fup_template">FUP
+                                                    Template </a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/packages/dynamic_vendor_attributes">Dynamic
+                                                    Vendor <br> Attributes</a></li>
+                                            <li><a href="" style="pointer-events: none"><b> Monitoring </b></a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/monitoring/active_sessions">Active
+                                                    Sessions</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/monitoring/completed_session">Completed
+                                                    Sessions</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/monitoring/traffic_graph">Traffic
+                                                    Graph </a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#">
+                                    <!-- <i class="dripicons-briefcase"></i> -->
+                                    <i class="fa fa-briefcase" aria-hidden="true"></i> Billing
+                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    <!-- <i class="mdi mdi-chevron-down mdi-drop"></i> -->
+                                </a>
+                                <ul class="submenu megamenu">
+                                    <li>
+                                        <ul>
+                                            <li><a href="" style="pointer-events: none">Billing</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/billing/products">Products</a>
+                                            </li>
+                                            <li><a href="https://admin.opticalbroadband.in/billing/plans">Plans</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/billing/notifications">Notifications</a>
+                                            </li>
+                                            <li><a href="https://admin.opticalbroadband.in/billing/invoice_template">Invoice
+                                                    Template</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/billing/receipt_template">Receipt
+                                                    Template</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/billing/credit_note_template">Credit
+                                                    Note Template</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/billing/caf_template">CAF
+                                                    Template</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/billing/orders">Orders </a>
+                                            </li>
+                                            <li><a href="https://admin.opticalbroadband.in/billing/invoices">Invoices
+                                                </a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/billing/proforma_invoices">Proforma
+                                                    Invoices </a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li><a href="https://admin.opticalbroadband.in/billing/invoice_payments">Invoices
+                                                    associated with <br> payments </a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/billing/payments">Payments</a>
+                                            </li>
+                                            <li><a href="https://admin.opticalbroadband.in/billing/credit_notes">Credit
+                                                    Notes</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/billing/pay_as_you_go"> Pay
+                                                    As You Go Users</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/billing/scheduled_renewals">Scheduled
+                                                    Renewals</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/billing/grace_period_users">Grace
+                                                    Period users</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/billing/renewal_summary_details">Renewal
+                                                    Summary details </a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/billing/pay_later_users">Pay
+                                                    later users</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/billing/static_ip">Static IP
+                                                    billing </a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/billing/billing_configuration">Billing
+                                                    configuration </a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/billing/billing_diagnostics">Billing
+                                                    diagnostics </a></li>
+                                        </ul>
+                                    </li>`
+                                    <li>
+                                        <ul>
+                                            <li><a href="" style="pointer-events: none">Payment Collection</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/payment_collection/tds_payments">TDS
+                                                    Payments</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/payment_collection/cheque_payments">Cheque
+                                                    Payments</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/payment_collection/cash_payments">Cash
+                                                    Payments</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/payment_collection/collections_requested">Collections
+                                                    Requested</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/payment_collection/collection_users">Collection
+                                                    Users</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/payment_collection/collection_approval">Collection
+                                                    Approval</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#"><i class="fa fa-th-large" aria-hidden="true"></i>
+                                    <!-- <i class="dripicons-view-thumb"> -->
+
+
+                                    </i>Apps <i class="fa fa-chevron-down" aria-hidden="true"></i>
+
+                                    <!-- <i class="mdi mdi-chevron-down mdi-drop"></i> -->
+                                </a>
+                                <ul class="submenu megamenu">
+                                    <li style="width: 140px;">
+                                        <ul>
+                                            <li><a href="" style="pointer-events: none"><b> Helpdesk </b></a></li>
+                                            <li><a href="">Helpdesk</a></li>
+                                            <li><a href="" style="pointer-events: none"><b> Tasks </b></a></li>
+                                            <li><a href="#">Tasks </a></li>
+                                            <li><a href="" style="pointer-events: none"><b> Reporting </b></a></li>
+                                            <li><a href="#">Reports</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/reporting/schedule_reporting">Schedule
+                                                    Report </a></li>
+                                            <li><a href="" style="pointer-events: none"><b> Announcements </b></a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/announcements">Announcements
+                                                </a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/announcements/triggers">Triggers
+                                                </a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/announcements/msg_subzone">Messages
+                                                    to sub <br> zones </a></li>
+                                        </ul>
+                                    </li>
+                                    <li style="width:150px;">
+                                        <ul>
+                                            <li><a href="" style="pointer-events: none"><b> External Integration
+                                                    </b></a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/external_integration/sms">
+                                                    SMS</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/external_integration/email">
+                                                    Email</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/external_integration/payment_gateway">
+                                                    Payment Gateway</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/external_integration/whatsapp">
+                                                    WhatsApp </a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/external_integration/ftp">
+                                                    FTP</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/external_integration/google_drive">
+                                                    Google Drive</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/external_integration/s3"> S3
+                                                </a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/external_integration/one_signal">
+                                                    One Signal </a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/external_integration/web_hooks">
+                                                    WebHooks</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/external_integration/quick_books">
+                                                    QuickBooks</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/external_integration/iptv">
+                                                    IPTV </a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/external_integration/customize_ipphone">
+                                                    Voice Phone</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/external_integration/customize_ott">
+                                                    OTT</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/external_integration/ivr">
+                                                    IVR</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/external_integration/enach">
+                                                    Enach</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/external_integration/ADHARKYC">
+                                                    Aadhaar KYC</a></li>
+                                        </ul>
+                                    </li>
+                                    <li style="width:190px;">
+                                        <ul>
+                                            <li><a href="" style="pointer-events: none"><b> Inventory </b></a></li>
+                                            <li><a href="#">Inventory Dashboard</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/inventory/stock_overview">Stock
+                                                    Overview</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/inventory/stock_details">Stock
+                                                    Details</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/inventory/items">Items</a>
+                                            </li>
+                                            <li><a href="https://admin.opticalbroadband.in/inventory/vendor-management">Vendor
+                                                    Management</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/inventory/manage-location">Manage
+                                                    Locations</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/inventory/configuration">Configuration</a>
+                                            </li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/inventory/approval">Approval</a>
+                                            </li>
+                                            <li><a href="" style="pointer-events: none"><b> Discount Voucher </b></a>
+                                            </li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/inventory/discount_management">
+                                                    Discount Coupon <br> Management</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/inventory/discount_configuration">
+                                                    Discount Configuration</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li style="width:170px;">
+                                        <ul>
+                                            <li><a href="" style="pointer-events: none"><b> Leads </b></a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/leads/lead_management">Lead
+                                                    Management</a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/leads/lead-configuration">Lead
+                                                    Configuration</a></li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/leads/completed_leads">Completed</a>
+                                            </li>
+                                            <li><a
+                                                    href="https://admin.opticalbroadband.in/leads/dropped_leads">Dropped</a>
+                                            </li>
+                                            <li><a href="https://admin.opticalbroadband.in/leads/assign_leads">Assign
+                                                    Leads</a></li>
+                                            <li><a href="" style="pointer-events: none"><b> IPTV </b></a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/leads/set-of-box">Set Top Box
+                                                </a></li>
+                                            <li><a href="" style="pointer-events: none"><b> Voice Phone </b></a></li>
+                                            <li><a href="https://admin.opticalbroadband.in/leads/set-of-phone">Voice
+                                                    Phone</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#">
+                                    <!-- <i class="dripicons-archive"></i> --><i class="fa fa-archive"
+                                        aria-hidden="true"></i>
+                                    Routers & Logs
+                                    <!-- <i class="mdi mdi-chevron-down mdi-drop"></i> -->
+                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                </a>
+                                <ul class="submenu megamenu">
+                                    <li style="width:190px;">
+                                        <ul>
+                                            <li><a href="" style="pointer-events: none"><b> Router Config </b></a></li>
+                                            <li><a href="#"> Router </a></li>
+                                            <li><a href="#"> IP Management </a></li>
+                                            <li><a href="#"> OLT and CPE Devices </a></li>
+                                            <li><a href="" style="pointer-events: none"><b> Analytics </b></a></li>
+                                            <li><a href="#"> Analytics </a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li><a href="" style="pointer-events: none"><b> Captive Portal Settings
+                                                    </b></a></li>
+                                            <li><a href="#"> Configuration </a></li>
+                                            <li><a href="#"> Blocked MACs</a></li>
+                                            <li><a href="#"> Customize Captive Portal </a></li>
+                                            <li><a href="#"> Customize User Portal </a></li>
+                                            <li><a href="#"> Targeted Ads</a></li>
+                                            <li><a href="#"> User Registration Config </a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li><a href="" style="pointer-events: none"><b> Logs </b></a></li>
+                                            <li><a href="#"> Event Logs</a></li>
+                                            <li><a href="#"> SMS Logs</a></li>
+                                            <li><a href="#"> Email Logs</a></li>
+                                            <li><a href="#"> WhatsApp Logs</a></li>
+                                            <li><a href="#"> Payment Logs</a></li>
+                                            <li><a href="#"> NAT Logs</a></li>
+                                            <li><a href="#"> Webhook Logs</a></li>
+                                            <li><a href="#"> Release Notes</a></li>
+                                            <li><a href="#"> DHCP Leases</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- End navigation menu -->
+                    </div> <!-- end #navigation -->
+                </div> <!-- end container -->
+            </div> <!-- end navbar-custom -->
+        </header>
+        <!-- End Navigation Bar-->
+
+    </div>
+
+    <div class="modal fade bs-example-modal-center1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title mt-0 text-center">Switch Zone</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+
+                <div class="modal-body">
+                    <p class="pb-4">Select the zone to switch to
+                    </p>
+                    <form>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <select class="form-control" name="product" size="8">
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="form-group row m-3">
+                            <div class="col-sm-12 text-right">
+                                <button type="button" class="btn btn-outline-pink btn-sm waves-effect">Switch
+                                    Zone</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- navbar for configration start -->
+    <ul class="nav nav-underline justify-content-around">
+        <li class="nav-item">
+            <a class="nav-link text-black " aria-current="page" href="#">Configuration</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link  text-black" target="_blank" href="BLOCKED MACS.html">BLOCKED MACS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active text-black" target="_blank" href="USER PORTAL.html">USER PORTAL</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-black" target="_blank" href="TARGETED ADS.html">TARGETED ADS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-black" target="_blank" href="USER REGISTRATION.html">USER REGISTRATION</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-black" target="_blank" href="CUSTOMIZE CAPTIVE PORTAL.html">CUSTOMIZE CAPTIVE
+                PORTAL</a>
+        </li>
+    </ul>
+    <!-- navbar for configration end-->
+    <!-- navbar for user portal start -->
+
+    <ul class="nav nav-tabs justify-content-evenly" style="text-transform: capitalize; font-size: 10px;">
+
+        <li class="nav-item">
+            <a class="nav-link text-black " href="USER_PORTAL.html">Basic Information Box</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-black" href="Have_Pin_Button.html">Have Pin Button </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-black" href="change_plan(postpaid/prepaid).html">change plan(postpaid/prepaid)</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-black " href="data_and_session_information.html">data and session information</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-black " href="page_navigation_button.html">page navigation button</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-black active" href="bill_&_payment_options.html">bill & payment options</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-black" href="Helpdesk_Options.html">Helpdesk Options</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-black" href="general_information.html">general information</a>
+        </li>
+    </ul>
+    <!-- navbar for user portal end -->
+    <div class="container-fluid card mt-3"><h1>Bill & Payment options</h1></div>
+    <div class="container-fluid card mt-3">
+
+        <table class="table" style="text-transform: capitalize;">
+            <tr class="text-center">
+                <th colspan="2">view/Edit</th>
+            </tr>
+            <tr>
+                <td>Show Balance/Due</td>
+                <td>
+                    <input type="checkbox" name="" id="">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                     <div class="row">
+                    <div class="col-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                due
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                balance
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            </tr>
+            <tr>
+                <td>Download bills</td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td>View bill details</td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Filter bills</td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Based On</td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td>View payment details</td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Payment Recipt Download Button</td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td>View Package Details in Recharge</td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Override Payment Using Link <i class="fa fa-exclamation-circle" aria="hidden">&nbsp;&nbsp;note</i></td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" name="" id="" class="form-control form-check" placeholder="Enter Payment Here...."></td>
+            </tr>
+            <tr>
+                <td>Pay bills&nbsp;<i class="fa fa-exclamation-circle" aria="hidden">&nbsp;&nbsp;note</i></td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Pay bills using pins <i class="fa fa-exclamation-circle" aria="hidden">&nbsp;&nbsp;note</i></td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Make payment button <i class="fa fa-exclamation-circle" aria="hidden">&nbsp;&nbsp;note</i></td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Force to pay full amount <i class="fa fa-exclamation-circle" aria="hidden">&nbsp;&nbsp;note</i></td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Verify using Captcha  <i class="fa fa-exclamation-circle" aria="hidden">&nbsp;&nbsp;note</i></td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Verify using OTP <i class="fa fa-exclamation-circle" aria="hidden">&nbsp;&nbsp;note</i></td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td> Verify using Captcha and OTP <i class="fa fa-exclamation-circle" aria="hidden">&nbsp;&nbsp;note</i></td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Pay for FUP through gateway <i class="fa fa-exclamation-circle" aria="hidden">&nbsp;&nbsp;note</i></td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Captcha Verification for Recharge <i class="fa fa-exclamation-circle" aria="hidden">&nbsp;&nbsp;note</i></td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td> OTP Verification for Recharge <i class="fa fa-exclamation-circle" aria="hidden">&nbsp;&nbsp;note</i></td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Captcha and OTP Verification for Recharge <i class="fa fa-exclamation-circle" aria="hidden">&nbsp;&nbsp;note</i></td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Recharge through Payment gateway <i class="fa fa-exclamation-circle" aria="hidden">&nbsp;&nbsp;note</i></td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Show Plan Breakup <i class="fa fa-exclamation-circle" aria="hidden">&nbsp;&nbsp;note</i></td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Show Remark Field in Request to collect payment <i class="fa fa-exclamation-circle" aria="hidden">&nbsp;&nbsp;note</i></td>
+                <td>
+                    <input type="checkbox" name="" id="">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Direct login link for pay bills or recharge</td>
+                <td>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    make payment
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    recharge
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    both
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </td>
+            </tr>
+        <tr>
+                <td><button class="btn btn-danger">save</button></td>
+                <td class="float-end">
+                    <button class="btn btn-secondary">add to all subzones</button>
+                    <button class="btn btn-secondary">subzones restrictioon</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--****************************************************************************************8-->
+    <script src="https://kit.fontawesome.com/65b1959c61.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fe8747bf5b.js" crossorigin="anonymous"></script>
+</body>
+<!-- jQuery  -->
+<script src="https://admin.opticalbroadband.in/assets/js/jquery.min.js"></script>
+<script src="https://admin.opticalbroadband.in/assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://admin.opticalbroadband.in/assets/js/modernizr.min.js"></script>
+<script src="https://admin.opticalbroadband.in/assets/js/waves.js"></script>
+<script src="https://admin.opticalbroadband.in/assets/js/jquery.slimscroll.js"></script>
+
+<script src="https://admin.opticalbroadband.in/assets/plugins/peity-chart/jquery.peity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+    integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
+    crossorigin="anonymous"></script>
+
+
+<!--Morris Chart-->
+<script src="https://admin.opticalbroadband.in/assets/plugins/morris/morris.min.js"></script>
+<script src="https://admin.opticalbroadband.in/assets/plugins/raphael/raphael-min.js"></script>
+
+<script src="https://admin.opticalbroadband.in/assets/pages/dashboard.js"></script>
+<!-- App js -->
+<script src="https://admin.opticalbroadband.in/assets/js/app.js"></script>
+
+<script>
+    var expanded = false;
+
+    function showCheckboxes2() {
+        var checkboxes = document.getElementById("checkboxes2");
+        if (!expanded) {
+            checkboxes.style.display = "block";
+            expanded = true;
+        } else {
+            checkboxes.style.display = "none";
+            expanded = false;
+        }
+    }
+</script>
+
+<script>
+    let expanded = false;
+
+    function showCheckboxes3() {
+        let checkboxes = document.getElementById("checkboxes3");
+        if (!expan) {
+            checkboxes.style.display = "block";
+            expanded = true;
+        } else {
+            checkboxes.style.display = "none";
+            expanded = false;
+        }
+    }
+</script>
+
+</html>

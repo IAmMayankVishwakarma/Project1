@@ -1,0 +1,49 @@
+.heading_Configuration{
+    font-size: 20px;
+}
+.tooltip-text{
+    visibility:hidden;
+    position:absolute;
+    z-index:10;
+    width:100px;
+    color:white;
+    font-size:12px;
+    background-color:pink;
+    border-radius:12px;
+    padding: 10px 15px 10px 15px;
+    left: 28%;
+    -webkit-border-radius:12px;
+    -moz-border-radius:12px;
+    -ms-border-radius:12px;
+    -o-border-radius:12px;
+}
+  .note{
+  /* border:2px solid black; */
+  width: 200px;
+  font:15px gray;
+  margin-bottom:0px;
+  }
+
+
+  
+    
+  
+  .hover-text{
+    position: relative;
+    display: inline-block;
+    margin: 0px;
+    font-family: Arial;
+    text-align: center;
+  }
+  .containerTooltip::before{
+
+    content:" ";
+    position:absolute;
+    right: 75px;
+    /* bottom: px; */
+    width: 40px;
+    z-index: -10;
+    height: 40px;
+    background-color:pink;
+    border-radius: 5px;
+    transform: rotate(45deg); }

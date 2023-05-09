@@ -1,0 +1,120 @@
+
+    @media (min-width: 992px) {
+        #topnav .navigation-menu > li .submenu.megamenu > li .app-menu{
+            width: 143px;
+          
+        }
+    }
+ 
+    .breadcrumb > .breadcrumb-item + .breadcrumb-item:before {
+        color: black;
+    }
+    .breadcrumb > .breadcrumb-item + .breadcrumb-item:before {
+            color: black;
+        }
+   
+     #search-form { 
+         display: none;
+         }  
+    .search-field {
+        background-color: transparent;
+        background-image: url(https://wp-themes.com/wp-content/themes/twentythirteen/images/search-icon.png);
+        background-position: 5px  center;
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        border: none;
+        cursor: pointer;
+        height: 37px;
+        margin: 0 0;
+        padding: 0 0 0 34px;
+        position: relative;
+        -webkit-transition: width 400ms ease, background 400ms ease;
+        transition:         width 400ms ease, background 400ms ease;
+        width:0px;
+        cursor: pointer;
+    }
+
+    .search-field:focus {
+        border: 2px solid #c3c0ab;
+        cursor: text;
+        outline: 0;
+        width: 170px;
+    
+    }
+    .search-form .search-submit { 
+        display:none;
+    }
+    .badge{
+        padding: 3px 5px;
+    }
+    
+    /* asdfgasg */
+    .multiselect2 {
+width: 100%;
+}
+
+.selectBox2 {
+position: relative;
+}
+
+.selectBox2 select {
+width: 100%;
+font-weight: bold;
+}
+
+.overSelect2 {
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+}
+
+#checkboxes2 {
+display: none;
+border: 1px #dadada solid;
+}
+
+#checkboxes2 label {
+display: block;
+}
+
+#checkboxe2 label:hover {
+background-color: #1e90ff;
+}
+
+/* azbvdsafbsdfb */
+
+.multiselect3 {
+width: 100%;
+}
+
+.selectBox3 {
+position: relative;
+}
+
+.selectBox3 select {
+width: 100%;
+font-weight: bold;
+}
+
+.overSelect3 {
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+}
+
+#checkboxes3 {
+display: none;
+border: 1px #dadada solid;
+}
+
+#checkboxes3 label {
+display: block;
+}
+
+#checkboxe3 label:hover {
+background-color: #1e90ff;
+}
